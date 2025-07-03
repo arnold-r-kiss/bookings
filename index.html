@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Central Bookings Calendar</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embedded Google Calendar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .calendar-container {
+      border: 1px solid #777;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+    }
+
+    @media (max-width: 850px) {
+      iframe {
+        height: 500px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBucharest&showPrint=0&src=Y2Y4ODczZjgwNTRhYWQwMjc0YjI4OWU1NTZmNTc5OTgyMDgyNjE3ZWFjOTUwNGIwNzhiZThhOWQ4ZGYyZmZjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=dXRqbWVlNzFuazd0a3R0OGRnNXJvMHVxZGpmMTFmYnRAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230b8043&color=%238e24aa" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <div class="calendar-container">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBucharest&showPrint=0&src=Y2Y4ODczZjgwNTRhYWQwMjc0YjI4OWU1NTZmNTc5OTgyMDgyNjE3ZWFjOTUwNGIwNzhiZThhOWQ4ZGYyZmZjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=dXRqbWVlNzFuazd0a3R0OGRnNXJvMHVxZGpmMTFmYnRAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230b8043&color=%238e24aa" scrolling="no"></iframe>
+  </div>
 </body>
 </html>
